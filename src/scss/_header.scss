@@ -1,0 +1,24 @@
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.link-logo {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 43px;
+}
+
+.header-logo-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #333;
+}
+
+.header-logo-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
