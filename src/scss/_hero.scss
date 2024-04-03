@@ -1,0 +1,78 @@
+@use "mixins";
+
+.section-hero {
+  padding-bottom: 120px;
+}
+
+.hero-wrap {
+  display: flex;
+  gap: 122px;
+}
+
+.hero-wrap-left-side {
+  margin-top: 336px;
+}
+
+.page-title {
+  margin-bottom: 90px;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.project-name {
+  display: block;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-primary-color);
+}
+
+.choose-project-btn-wrap {
+  display: flex;
+  gap: 23px;
+  margin-bottom: 90px;
+}
+
+.choose-project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 53px;
+  border: 1px solid var(--task-number-color);
+  background-color: var(--project-number-btn-bg-color);
+}
+
+.project-number {
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--title-color);
+
+  &:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    margin-left: 32px;
+    margin-right: 32px;
+    border: 1px solid var(--separator-color);
+    width: 43px;
+    height: 100%;
+    transform: rotate(135deg);
+  }
+}
+
+.hero-img-wrap {
+  position: relative;
+}
+
+.hero-btn-light {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include mixins.btn-light;
+}

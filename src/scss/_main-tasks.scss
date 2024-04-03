@@ -1,0 +1,37 @@
+.section-main-tasks {
+  padding-bottom: 60px;
+}
+
+.main-tasks-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number-task {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  color: #f2f2f2;
+}
+
+.main-task-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.63636;
+  color: #333;
+}
+
+.main-task-text.first {
+  width: 279px;
+}
+
+.main-task-text.second {
+  width: 420px;
+}
+
+.task-wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

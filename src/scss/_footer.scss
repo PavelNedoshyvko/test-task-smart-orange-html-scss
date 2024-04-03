@@ -1,0 +1,141 @@
+.footer {
+  padding-top: 58px;
+  background-color: var(--footer-bg-color);
+}
+
+.container.flex {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.footer-link-logo {
+  position: relative;
+  display: block;
+  width: 145px;
+  height: 94px;
+  margin-right: 99px;
+}
+
+.footer-logo-up {
+  fill: var(--text-footer-color);
+}
+
+.footer-logo-name-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Tachyon", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--text-footer-color);
+  text-transform: uppercase;
+}
+
+.footer-nav {
+  margin-right: 157px;
+}
+
+.footer-block-title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: var(--text-footer-color);
+}
+
+.footer-nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: var(--text-footer-color);
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo-location {
+  stroke: var(--text-footer-color);
+}
+
+.footer-address {
+  margin-right: 140px;
+}
+
+.footer-address-text {
+  width: 240px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: var(--text-footer-color);
+}
+
+.footer-address-wrap {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 32px;
+}
+
+.footer-phone-wrap {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 32px;
+}
+
+.footer-logo-phone {
+  fill: var(--text-footer-color);
+}
+
+.footer-link-tel {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: var(--text-footer-color);
+}
+
+.footer-address-email {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.footer-logo-email {
+  stroke: var(--text-footer-color);
+}
+
+.footer-link-email {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: var(--text-footer-color);
+}
+
+.social-list {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-logo-social {
+  fill: var(--text-footer-color);
+}
+
+.separator {
+  height: 1px;
+  margin-bottom: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.rights {
+  display: block;
+  padding-bottom: 24px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.83333;
+  color: rgba(200, 200, 200, 0.5);
+}

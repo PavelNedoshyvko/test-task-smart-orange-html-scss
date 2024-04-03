@@ -1,0 +1,48 @@
+@use "mixins";
+
+.section-about-company {
+  padding-bottom: 150px;
+}
+
+.section-about-company-bg {
+  padding-top: 30px;
+  padding-left: 100px;
+  height: 435px;
+  background-color: var(--section-about-company-bg-color);
+}
+
+.about-company-wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-company-img-first {
+  margin-bottom: 30px;
+}
+
+.about-company-img-third {
+  margin-bottom: 30px;
+}
+
+.section-title.about-company {
+  margin-bottom: 20px;
+}
+
+.about-company-text {
+  width: 400px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5625;
+  color: var(--text-secondary-color);
+}
+
+.about-company-btn-light {
+  margin-bottom: 30px;
+  @include mixins.btn-light;
+}
+
+.about-company-desc {
+  margin-bottom: 30px;
+}

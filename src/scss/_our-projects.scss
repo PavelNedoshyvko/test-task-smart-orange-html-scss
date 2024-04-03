@@ -1,0 +1,68 @@
+@use "mixins";
+
+.section-our-projects {
+  margin-bottom: 120px;
+}
+
+.section-title.our-projects {
+  margin-bottom: 60px;
+}
+
+.our-projects-first-img {
+  padding-top: 48px;
+  padding-left: 79px;
+  max-width: 570px;
+  min-height: 255px;
+  background-image: linear-gradient(var(--bg-img), var(--bg-img)),
+    url(../img/webp/our-projects-1.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: red;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(var(--bg-img), var(--bg-img)),
+      url(../img/webp/our-projects-1@2x.webp);
+  }
+}
+
+.our-projects-btn-details {
+  @include mixins.btn-light;
+  width: 129px;
+  height: 24px;
+  background-color: transparent;
+  color: var(--button-bg-light-color);
+
+  .arrow-svg {
+    fill: #fff;
+  }
+}
+
+.our-projects-project-name {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--text-img-color);
+}
+
+.our-projects-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.our-projects-btn {
+  @include mixins.btn-light;
+  margin-left: auto;
+  background-color: var(--button-bg-dark-color);
+  color: var(--text-img-color);
+
+  .arrow-svg {
+    fill: var(--text-img-color);
+  }
+}
