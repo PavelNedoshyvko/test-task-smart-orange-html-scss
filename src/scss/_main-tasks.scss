@@ -1,11 +1,18 @@
+@use "mixins";
+
 .section-main-tasks {
   padding-bottom: 60px;
 }
 
 .main-tasks-wrap {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
+
+  @include mixins.viewport-desktop {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .number-task {
@@ -17,17 +24,29 @@
 
 .main-task-text {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 1.63636;
   color: #333;
+
+  @include mixins.viewport-tablet {
+    font-size: 22px;
+  }
 }
 
 .main-task-text.first {
-  width: 279px;
+  width: 150px;
+
+  @include mixins.viewport-tablet {
+    width: 279px;
+  }
 }
 
 .main-task-text.second {
-  width: 420px;
+  width: 150px;
+
+  @include mixins.viewport-tablet {
+    width: 420px;
+  }
 }
 
 .task-wrap {

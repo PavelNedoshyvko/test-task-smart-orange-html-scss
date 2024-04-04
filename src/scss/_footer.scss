@@ -1,11 +1,20 @@
+@use "mixins";
+
 .footer {
   padding-top: 58px;
   background-color: var(--footer-bg-color);
 }
 
-.container.flex {
+.footer .container.flex {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 60px;
+  gap: 60px;
+
+  @include mixins.viewport-desktop {
+    flex-direction: row;
+  }
 }
 
 .footer-link-logo {
@@ -55,12 +64,21 @@
   gap: 16px;
 }
 
+.footer-nav-item {
+  transition: scale var(--transition-time);
+  &:hover {
+    scale: (1.2);
+  }
+}
+
 .footer-logo-location {
   stroke: var(--text-footer-color);
 }
 
 .footer-address {
-  margin-right: 140px;
+  @include mixins.viewport-desktop {
+    margin-right: 140px;
+  }
 }
 
 .footer-address-text {
@@ -121,6 +139,13 @@
   gap: 40px;
 }
 
+.social-list-item {
+  transition: scale var(--transition-time);
+  &:hover {
+    scale: (1.2);
+  }
+}
+
 .footer-logo-social {
   fill: var(--text-footer-color);
 }
@@ -138,4 +163,11 @@
   font-size: 12px;
   line-height: 1.83333;
   color: rgba(200, 200, 200, 0.5);
+}
+
+.footer-social {
+  margin-right: 80px;
+  @include mixins.viewport-desktop {
+    margin-right: 0;
+  }
 }

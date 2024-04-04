@@ -1,3 +1,5 @@
+@use "mixins";
+
 .header {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -37,6 +39,17 @@
 .nav-list {
   display: flex;
   gap: 60px;
+
+  @include mixins.viewport-desktop-max {
+    display: none;
+  }
+}
+
+.nav-item {
+  transition: scale var(--transition-time);
+  &:hover {
+    scale: (1.2);
+  }
 }
 
 .nav-link {
@@ -50,4 +63,71 @@
   display: flex;
   align-items: center;
   gap: 330px;
+}
+
+.active {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-primary-color);
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 4px;
+    background-color: var(--text-primary-color);
+  }
+}
+
+.header .menu-toggle {
+  min-height: 32px;
+  min-width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 24px 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.header .menu-toggle {
+  @include mixins.viewport-desktop {
+    display: none;
+  }
+}
+
+.burger-icon {
+  stroke: #000;
+}
+
+.scroll-up-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  transition: opacity var(--transition-time);
+  cursor: pointer;
+  opacity: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  color: var(--text-primary-color);
+
+  background-color: var(--mobile-menu-bg-color);
 }

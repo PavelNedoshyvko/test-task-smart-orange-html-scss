@@ -9,8 +9,8 @@
 }
 
 .our-projects-first-img {
-  padding-top: 48px;
-  padding-left: 79px;
+  padding-top: 40px;
+  padding-left: 30px;
   max-width: 570px;
   min-height: 255px;
   background-image: linear-gradient(var(--bg-img), var(--bg-img)),
@@ -27,6 +27,11 @@
     background-image: linear-gradient(var(--bg-img), var(--bg-img)),
       url(../img/webp/our-projects-1@2x.webp);
   }
+
+  @include mixins.viewport-tablet {
+    padding-top: 48px;
+    padding-left: 79px;
+  }
 }
 
 .our-projects-btn-details {
@@ -35,34 +40,59 @@
   height: 24px;
   background-color: transparent;
   color: var(--button-bg-light-color);
+  transition: background-color var(--transition-time);
 
   .arrow-svg {
     fill: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-dark);
   }
 }
 
 .our-projects-project-name {
   margin-bottom: 8px;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 1;
   color: var(--text-img-color);
+
+  @include mixins.viewport-tablet {
+    font-size: 64px;
+  }
 }
 
 .our-projects-gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 30px;
+
+  @include mixins.viewport-desktop {
+    justify-content: flex-start;
+  }
 }
 
 .our-projects-btn {
   @include mixins.btn-light;
-  margin-left: auto;
+
   background-color: var(--button-bg-dark-color);
   color: var(--text-img-color);
+  transition: background-color var(--transition-time);
+
+  @include mixins.viewport-desktop {
+    margin-left: auto;
+  }
 
   .arrow-svg {
     fill: var(--text-img-color);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-dark);
   }
 }

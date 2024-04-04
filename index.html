@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Project</title>
   </head>
-  <body>
+  <body data-modal-body>
     <header id="header" class="header">
       <div class="container">
         <nav class="header-wrap">
@@ -16,15 +16,36 @@
             </svg>
             <span class="header-logo-name-text">DIGITAL PROJECT</span>
           </a>
+          <button
+            class="menu-toggle js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="burger-icon" width="32" height="22">
+              <use href="./src/img/icons/icons.svg#icon-burger-menu"></use>
+            </svg>
+          </button>
           <ul class="nav-list">
-            <li><a class="nav-link" href="./index.html">Главная</a></li>
-            <li><a class="nav-link" href="#gallery">Галерея</a></li>
-            <li><a class="nav-link" href="#projects">Проекты</a></li>
-            <li><a class="nav-link" href="#sertificates">Сертификаты</a></li>
-            <li><a class="nav-link" href="#footer">Контакты</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Галерея</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Проекты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sertificates">Сертификаты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Контакты</a>
+            </li>
           </ul>
         </nav>
       </div>
+      <button type="button" class="scroll-up-btn">Scroll Up</button>
     </header>
     <main>
       <!--Section Hero-->
@@ -320,13 +341,21 @@
         <nav class="footer-nav">
           <h3 class="footer-block-title">Информация</h3>
           <ul class="footer-nav-list">
-            <li><a class="footer-nav-link" href="#header">Главная</a></li>
-            <li><a class="footer-nav-link" href="#gallery">Галерея</a></li>
-            <li><a class="footer-nav-link" href="#projects">Проекты</a></li>
-            <li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#header">Главная</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#gallery">Галерея</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#projects">Проекты</a>
+            </li>
+            <li class="footer-nav-item">
               <a class="footer-nav-link" href="#sertificates">Сертификаты</a>
             </li>
-            <li><a class="footer-nav-link" href="#footer">Контакты</a></li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#footer">Контакты</a>
+            </li>
           </ul>
         </nav>
         <address class="footer-address">
@@ -360,7 +389,7 @@
         <div class="footer-social">
           <h3 class="footer-block-title">Социальные сети</h3>
           <ul class="social-list">
-            <li>
+            <li class="social-list-item">
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
@@ -371,7 +400,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list-item">
               <a
                 href="https://twitter.com/?lang=en"
                 target="_blank"
@@ -382,7 +411,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list-item">
               <a
                 href="https://www.linkedin.com/"
                 target="_blank"
@@ -393,7 +422,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-list-item">
               <a
                 href="https://ru.pinterest.com/"
                 target="_blank"
@@ -410,6 +439,37 @@
       <div class="separator"></div>
       <span class="rights">© 2019 Digital Project. Все права защищены.</span>
     </footer>
+
+    <!--Mobile menu-->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg class="x-close-icon" width="24" height="24">
+          <use href="./src/img/icons/icons.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <div class="menu-wrap">
+        <nav class="nav">
+          <ul class="list mobile-menu">
+            <li class="item item-page">
+              <a class="link page" href="./index.html">Главная</a>
+            </li>
+            <li class="item item-page">
+              <a class="link page" href="#gallery">Галерея</a>
+            </li>
+            <li class="item item-page">
+              <a class="link page" href="#projects">Проекты</a>
+            </li>
+            <li class="item item-page">
+              <a class="link page" href="#sertificates">Сертификаты</a>
+            </li>
+            <li class="item item-page">
+              <a class="link page" href="#footer">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <script type="module" src="./src/js/main.js"></script>
   </body>

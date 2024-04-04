@@ -1,5 +1,23 @@
-@mixin viewport-md {
-  @media (min-width: 767px) {
+@mixin viewport-tablet-max {
+  @media (max-width: 767.9px) {
+    @content;
+  }
+}
+
+@mixin viewport-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin viewport-desktop-max {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin viewport-desktop {
+  @media (min-width: 1200px) {
     @content;
   }
 }

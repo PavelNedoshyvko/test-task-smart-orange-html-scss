@@ -6,11 +6,18 @@
 
 .hero-wrap {
   display: flex;
+  flex-direction: column;
   gap: 122px;
+
+  @include mixins.viewport-desktop {
+    flex-direction: row;
+  }
 }
 
 .hero-wrap-left-side {
-  margin-top: 336px;
+  @include mixins.viewport-desktop {
+    margin-top: 336px;
+  }
 }
 
 .page-title {
@@ -75,4 +82,10 @@
   left: 0;
   bottom: 0;
   @include mixins.btn-light;
+  transition: background-color var(--transition-time);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-light);
+  }
 }

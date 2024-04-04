@@ -1,16 +1,11 @@
 @use "mixins";
 
 html {
-  // font-size: 8px;
-  // @include mixins.viewport-md {
-  //   font-size: 10px;
-  // }
   scroll-behavior: smooth;
 }
 body {
   font-family: "TTHoves", sans-serif;
   color: var(--text-primary-color);
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1,
@@ -48,17 +43,18 @@ img {
   height: auto;
 }
 
-.wrapper {
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-}
-
 .container {
-  max-width: 1200px;
+  max-width: 375px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include mixins.viewport-tablet {
+    max-width: 768px;
+  }
+
+  @include mixins.viewport-desktop {
+    max-width: 1200px;
+  }
 }
 
 .section-title {
@@ -67,36 +63,3 @@ img {
   line-height: 1;
   color: var(--title-color);
 }
-
-// .icon {
-//   fill: red;
-// }
-
-// .dark {
-//   color-scheme: dark;
-// }
-
-// .title {
-//   font-size: 4rem;
-
-//   span {
-//     font-size: 5rem;
-//     text-transform: uppercase;
-//     font-weight: 700;
-//     @include mixins.text-gradient;
-//   }
-// }
-
-// .footer {
-//   padding: 3rem 0;
-//   font-size: 1.6rem;
-
-//   a {
-//     text-decoration: none;
-//     color: var(--brand-color);
-//     transition: 0.2s ease;
-//     &:hover {
-//       color: var(--brand-light-color);
-//     }
-//   }
-// }

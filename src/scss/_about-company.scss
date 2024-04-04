@@ -6,15 +6,23 @@
 
 .section-about-company-bg {
   padding-top: 30px;
-  padding-left: 100px;
-  height: 435px;
   background-color: var(--section-about-company-bg-color);
+
+  @include mixins.viewport-desktop {
+    padding-left: 100px;
+    height: 435px;
+  }
 }
 
 .about-company-wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 30px;
+
+  @include mixins.viewport-desktop {
+    flex-direction: row;
+  }
 }
 
 .about-company-img-first {
@@ -30,17 +38,27 @@
 }
 
 .about-company-text {
-  width: 400px;
+  width: 300px;
   margin-bottom: 20px;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5625;
   color: var(--text-secondary-color);
+
+  @include mixins.viewport-desktop {
+    width: 400px;
+  }
 }
 
 .about-company-btn-light {
   margin-bottom: 30px;
   @include mixins.btn-light;
+  transition: background-color var(--transition-time);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-light);
+  }
 }
 
 .about-company-desc {
